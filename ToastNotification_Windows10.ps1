@@ -21,17 +21,3 @@ $toast.ExpirationTime = [DateTimeOffset]::Now.AddMinutes(5)
 
 $notifier = [Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier("PowerShell")
 $notifier.Show($toast);
-
-<#
-$toasts = [Windows.UI.Notifications.ToastNotificationManager]::History.GetHistory()
-if ($toast -ne $null)
-{
-    $count = $toasts.Count()
-    [TileServices]::SetBadgeCountOnTile($count)
-
-    $badgeXml = [Windows.UI.Notifications.BadgeUpdateManager]::GetTemplateContent([Windows.UI.Notifications.BadgeTemplateType]::BadgeNumber)
-    $badgeXml.badge.value = $count.ToString()
-    $badge = [Windows.UI.Notifications.BadgeNotification]::new($badgeXml)
-    [Windows.UI.Notifications.BadgeUpdateManager]::CreateBadgeUpdaterForApplication().Update($badge)
-}
-#>
