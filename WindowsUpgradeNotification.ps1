@@ -1,3 +1,4 @@
+#used in https://github.com/dagrachon/windows_update_script
 $ErrorActionPreference = "Stop"
 
 $notificationTitle  = "Automatic WindowsUpdate"
